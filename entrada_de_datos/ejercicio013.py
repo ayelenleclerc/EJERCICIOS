@@ -17,3 +17,13 @@ Si se modifica el sueldo fijo del vendedor, entonces la fórmula utilizada para 
 ¿Hay que modificar el programa cada vez? ¿Cómo lo soluciono?
 
 """
+venta_total = float(
+    input(
+        "Ingrese el monto total de ventas realizadas por el vendedor durante el mes: "
+    )
+)
+COMISION = 0.16
+comision_venta = venta_total * COMISION
+SUELDO_FIJO = 200000
+sueldo_total = SUELDO_FIJO + comision_venta
+print("El importe a cobrar por el vendedor es: ", sueldo_total)

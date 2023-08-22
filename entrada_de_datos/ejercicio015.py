@@ -5,3 +5,11 @@ Se leen por teclado el nombre del vendedor, la cantidad de ventas que realizó y
 ¿Sobran datos? ¿Qué datos sobran?
 
 """
+vendedor = input("Ingrese el nombre del vendedor: ")
+salario_fijo = float(input("Ingrese el salario fijo del vendedor: "))
+ventas = float(input("Ingrese la cantidad de ventas realizadas: "))
+comision_fija = float(input("Ingrese la comisión fija: "))
+comision_variable = 0.5 * ventas
+salario_total = salario_fijo + comision_fija + comision_variable
+
+print(f"El salario total del vendedor {vendedor} es de ${salario_total}")

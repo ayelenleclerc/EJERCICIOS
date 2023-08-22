@@ -25,3 +25,31 @@ menor = numero_tres
 print("El mayor es: ", mayor)
 print("El medio es: ", medio)
 print("El menor es: ", menor)"""
+
+numero_uno = int(input("Ingrese el primer número: "))
+numero_dos = int(input("Ingrese el segundo número: "))
+numero_tres = int(input("Ingrese el tercer número: "))
+
+
+mayor = numero_uno
+medio = numero_dos
+menor = numero_tres
+
+if medio < menor:
+    auxiliar = medio
+    medio = menor
+    menor = auxiliar
+
+if numero_tres > mayor:
+    mayor = numero_tres
+    medio = numero_uno
+    menor = numero_dos
+
+if numero_dos > mayor:
+    mayor = numero_dos
+    medio = numero_uno
+    menor = numero_tres
+
+print("El mayor es:", mayor)
+print("El medio es:", medio)
+print("El menor es:", menor)

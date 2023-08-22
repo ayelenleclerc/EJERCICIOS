@@ -8,4 +8,16 @@ horas = (segundos % 86400) // 3600 # 3600 segundos = 1 hora
 
 minutos = (segundos % 3600) // 60 # 60 segundos = 1 minuto
 
-segundos_restantes = segundos % 60 # segundos restantes"""
+segundos_restantes = segundos % 60 # segundos restantes
+
+ // = division entera --> En este caso, 10 dividido entre 3 es 3.333..., pero al usar //, el resultado se redondea hacia abajo al valor entero más cercano, que es 3.
+"""
+
+segundos = int(input("Ingrese el valor en segundos: "))
+
+dias = segundos // 86400
+horas = (segundos % 86400) // 3600
+minutos = (segundos % 3600) // 60
+segundos_restantes = segundos % 60
+
+print(f"{dias} dias, {horas} horas, {minutos} minutos y {segundos_restantes} segundos.")

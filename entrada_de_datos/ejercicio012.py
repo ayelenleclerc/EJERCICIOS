@@ -7,3 +7,16 @@ Para pensar:
 ¿Qué pasaría si se ingresan valores negativos como medidas de ángulos?
 ¿Qué sucedería si la suma de los dos ángulos ingresados es mayor o igual a 180 grados?
 """
+
+angulo1 = int(input("Ingrese el valor en grados del primer ángulo: "))
+angulo2 = int(input("Ingrese el valor en grados del segundo ángulo: "))
+
+suma_de_angulos = angulo1 + angulo2
+valor_restante = 180 - suma_de_angulos
+
+if angulo1 < 0 or angulo2 < 0:
+    print("¡Error! Los valores de los ángulos deben ser positivos.")
+elif angulo1 + angulo2 >= 180:
+    print("¡Error! La suma de los ángulos ingresados es mayor o igual a 180 grados.")
+else:
+    print("El valor en grados del ángulo restante es: ", valor_restante)
