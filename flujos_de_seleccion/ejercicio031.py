@@ -27,3 +27,24 @@ costo = COSTO_BASICO + (COSTO_POR_PAGINA * num_paginas)
 
 print("El costo del libro es: $", costo)
 """
+COSTO_BASICO = 1000
+COSTO_POR_PAGINA = 35.10
+COSTO_ENC_RUSTICA = 1200
+COSTO_ENC_ESPECIAL = 880
+
+num_paginas = int(input("Ingrese el número de páginas del libro: "))
+
+if num_paginas > 600:
+    costo = (
+        COSTO_BASICO
+        + COSTO_ENC_RUSTICA
+        + COSTO_ENC_ESPECIAL
+        + (COSTO_POR_PAGINA * num_paginas)
+    )
+elif num_paginas > 300:
+    costo = COSTO_BASICO + COSTO_ENC_RUSTICA + (COSTO_POR_PAGINA * num_paginas)
+else:
+    costo = COSTO_BASICO + (COSTO_POR_PAGINA * num_paginas)
+
+
+print(f"Para {num_paginas} páginas, el costo del libro es: ${costo}")
