@@ -16,3 +16,25 @@ V	F	F
 F	V	F
 F	F	F
 En resumen, el conector "and" se utiliza para crear expresiones lógicas que requieren que todas las condiciones sean verdaderas para que la expresión sea verdadera."""
+
+
+LIMITE_EDAD = 10
+LIMITE_ALTURA = 1.60
+nombre = input("Ingrese su nombre:")
+edad = int(input("Ingrese su edad: "))
+altura = float(input("Ingrese su altura: "))
+
+entra_edad = edad >= LIMITE_EDAD
+entra_altura = altura > LIMITE_ALTURA
+entra = entra_edad and entra_altura
+
+if entra:
+    cartel = "Entraste"
+else:
+    cartel = "No entras"
+    if not entra_altura:
+        cartel += " por la altura"
+    if not entra_edad:
+        cartel += " por la edad"
+
+print(f"Hola {nombre}, {cartel}")

@@ -14,3 +14,21 @@ V	F	V
 F	V	V
 F	F	F
 El conector "or" se utiliza para crear expresiones lógicas que requieren que al menos una condición sea verdadera para ser verdadera."""
+
+LIMITE_EDAD = 6
+LIMITE_ALTURA = 1.50
+nombre = input("Ingrese su nombre:")
+edad = int(input("Ingrese su edad: "))
+altura = float(input("Ingrese su altura: "))
+
+entra_edad = edad >= LIMITE_EDAD
+entra_altura = altura > LIMITE_ALTURA
+entra = entra_edad or entra_altura
+
+if entra:
+    cartel = "Puedes Acceder!"
+else:
+    cartel = "No accedes por la altura, ni por la edad"
+
+
+print(f"Hola {nombre}, {cartel}")
