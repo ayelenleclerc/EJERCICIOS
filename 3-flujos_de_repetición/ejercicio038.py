@@ -14,3 +14,8 @@ n x 7 = 35
 n x 8 = 40  
 n x 9 = 45  
 n x 10 = 50   """
+
+numero = int(input("Ingrese un número entero: "))
+
+for i in range(1, 11):
+    print(f"{numero} x {i} = {numero * i}")
